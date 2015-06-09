@@ -1,0 +1,10 @@
+#!/usr/bin/env bash -e
+
+source ./deps
+core=./Bin/RentalOffer.Core.dll
+
+gmcs -t:library -r:$refs -out:$core RentalOffer.Core/*.cs
+gmcs -t:exe -r:$refs,$core -out:./Bin/Monitor.exe RentalOffer.Monitor/*.cs
+gmcs -t:exe -r:$refs,$core -out:./Bin/Need.exe RentalOffer.Need/*.cs
+
+echo Build successful

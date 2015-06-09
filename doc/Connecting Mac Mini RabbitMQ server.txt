@@ -1,0 +1,15 @@
+Connecting Mac Mini RabbitMQ server
+
+1. VNC to Mac Mini (which is named microserver.local)
+    Connect via Ethernet cable from notebook to Mac Mini
+    `ping -4 microserver.local` from notebook
+    Note the IPv4 address
+    VNC to <IPv4 address>:5900
+    Login to Mac Mini via Fred and normal password
+
+2. Identify wireless access devices from Mac Mini
+
+Connecting and configuring Airport Express
+
+1. Name is Fred Airport Express
+2. Wireless name is microservicenet

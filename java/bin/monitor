@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+java $JAVA_OPTS -cp target/classes:target/dependency/* com.microservices.rentaloffer.Monitor $1 $2

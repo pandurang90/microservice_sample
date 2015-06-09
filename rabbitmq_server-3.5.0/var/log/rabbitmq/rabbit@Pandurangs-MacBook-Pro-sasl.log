@@ -1,0 +1,158 @@
+
+=CRASH REPORT==== 25-Mar-2015::13:39:03 ===
+  crasher:
+    initial call: rabbit_epmd_monitor:init/1
+    pid: <0.161.0>
+    registered_name: []
+    exception exit: {{badmatch,noport},
+                     [{rabbit_epmd_monitor,init,1,
+                          [{file,"src/rabbit_epmd_monitor.erl"},{line,60}]},
+                      {gen_server,init_it,6,
+                          [{file,"gen_server.erl"},{line,306}]},
+                      {proc_lib,init_p_do_apply,3,
+                          [{file,"proc_lib.erl"},{line,239}]}]}
+      in function  gen_server:init_it/6 (gen_server.erl, line 330)
+    ancestors: [rabbit_epmd_monitor_sup,rabbit_sup,<0.94.0>]
+    messages: []
+    links: [<0.160.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 474
+  neighbours:
+
+=SUPERVISOR REPORT==== 25-Mar-2015::13:39:03 ===
+     Supervisor: {local,rabbit_epmd_monitor_sup}
+     Context:    start_error
+     Reason:     {{badmatch,noport},
+                  [{rabbit_epmd_monitor,init,1,
+                       [{file,"src/rabbit_epmd_monitor.erl"},{line,60}]},
+                   {gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},
+                   {proc_lib,init_p_do_apply,3,
+                       [{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},
+                  {name,rabbit_epmd_monitor},
+                  {mfargs,{rabbit_epmd_monitor,start_link,[]}},
+                  {restart_type,transient},
+                  {shutdown,4294967295},
+                  {child_type,worker}]
+
+
+=CRASH REPORT==== 25-Mar-2015::13:39:03 ===
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.92.0>
+    registered_name: []
+    exception exit: {bad_return,
+                     {{rabbit,start,[normal,[]]},
+                      {'EXIT',
+                       {error,
+                        {{shutdown,
+                          {failed_to_start_child,rabbit_epmd_monitor,
+                           {{badmatch,noport},
+                            [{rabbit_epmd_monitor,init,1,
+                              [{file,"src/rabbit_epmd_monitor.erl"},
+                               {line,60}]},
+                             {gen_server,init_it,6,
+                              [{file,"gen_server.erl"},{line,306}]},
+                             {proc_lib,init_p_do_apply,3,
+                              [{file,"proc_lib.erl"},{line,239}]}]}}},
+                         {child,undefined,rabbit_epmd_monitor_sup,
+                          {rabbit_restartable_sup,start_link,
+                           [rabbit_epmd_monitor_sup,
+                            {rabbit_epmd_monitor,start_link,[]},
+                            false]},
+                          transient,infinity,supervisor,
+                          [rabbit_restartable_sup]}}}}}}
+      in function  application_master:init/4 (application_master.erl, line 133)
+    ancestors: [<0.91.0>]
+    messages: [{'EXIT',<0.94.0>,normal}]
+    links: [<0.91.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 209
+  neighbours:
+
+=CRASH REPORT==== 25-Mar-2015::13:54:58 ===
+  crasher:
+    initial call: rabbit_epmd_monitor:init/1
+    pid: <0.141.0>
+    registered_name: []
+    exception exit: {{badmatch,noport},
+                     [{rabbit_epmd_monitor,init,1,
+                          [{file,"src/rabbit_epmd_monitor.erl"},{line,60}]},
+                      {gen_server,init_it,6,
+                          [{file,"gen_server.erl"},{line,306}]},
+                      {proc_lib,init_p_do_apply,3,
+                          [{file,"proc_lib.erl"},{line,239}]}]}
+      in function  gen_server:init_it/6 (gen_server.erl, line 330)
+    ancestors: [rabbit_epmd_monitor_sup,rabbit_sup,<0.103.0>]
+    messages: []
+    links: [<0.140.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 474
+  neighbours:
+
+=SUPERVISOR REPORT==== 25-Mar-2015::13:54:58 ===
+     Supervisor: {local,rabbit_epmd_monitor_sup}
+     Context:    start_error
+     Reason:     {{badmatch,noport},
+                  [{rabbit_epmd_monitor,init,1,
+                       [{file,"src/rabbit_epmd_monitor.erl"},{line,60}]},
+                   {gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},
+                   {proc_lib,init_p_do_apply,3,
+                       [{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},
+                  {name,rabbit_epmd_monitor},
+                  {mfargs,{rabbit_epmd_monitor,start_link,[]}},
+                  {restart_type,transient},
+                  {shutdown,4294967295},
+                  {child_type,worker}]
+
+
+=CRASH REPORT==== 25-Mar-2015::13:54:58 ===
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.102.0>
+    registered_name: []
+    exception exit: {bad_return,
+                     {{rabbit,start,[normal,[]]},
+                      {'EXIT',
+                       {error,
+                        {{shutdown,
+                          {failed_to_start_child,rabbit_epmd_monitor,
+                           {{badmatch,noport},
+                            [{rabbit_epmd_monitor,init,1,
+                              [{file,"src/rabbit_epmd_monitor.erl"},
+                               {line,60}]},
+                             {gen_server,init_it,6,
+                              [{file,"gen_server.erl"},{line,306}]},
+                             {proc_lib,init_p_do_apply,3,
+                              [{file,"proc_lib.erl"},{line,239}]}]}}},
+                         {child,undefined,rabbit_epmd_monitor_sup,
+                          {rabbit_restartable_sup,start_link,
+                           [rabbit_epmd_monitor_sup,
+                            {rabbit_epmd_monitor,start_link,[]},
+                            false]},
+                          transient,infinity,supervisor,
+                          [rabbit_restartable_sup]}}}}}}
+      in function  application_master:init/4 (application_master.erl, line 133)
+    ancestors: [<0.101.0>]
+    messages: [{'EXIT',<0.103.0>,normal}]
+    links: [<0.101.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 209
+  neighbours:

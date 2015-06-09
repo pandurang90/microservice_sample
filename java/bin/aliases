@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+alias monitor=$script_path/../target/rentaloffer-0.1.0-standalone/bin/monitor
+alias need=$script_path/../target/rentaloffer-0.1.0-standalone/bin/need

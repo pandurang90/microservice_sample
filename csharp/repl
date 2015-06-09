@@ -1,0 +1,11 @@
+#!/usr/bin/env bash -e
+
+script_path="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Add the libs to the csharp repl path
+rm -rf ~/.config/csharp
+mkdir -p ~/.config
+ln -s $script_path/Bin ~/.config/csharp
+
+./build
+csharp
